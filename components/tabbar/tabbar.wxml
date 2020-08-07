@@ -1,0 +1,14 @@
+<template name='tabbar'>
+  <view class="tabBar">
+    <block wx:for="{{tabBar}}" wx:for-item='item' wx:key='tabBar'>
+      <view class="tabBar-item">
+        <view bindtap="navi" data-url="{{item.tabBarPath}}">
+            <view>
+              <image class="icon" src="{{item.iconPath}}"/>
+            </view>
+            <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
