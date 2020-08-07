@@ -15,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    tabbar.tabbar("tabBar", 0, this)
+    tabbar.tabbar("tabBar", 2, this)
   },
 
   /**

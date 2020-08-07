@@ -40,8 +40,7 @@ function tabbarinit() {
    that.setData({ bindData });
  }
  function navi(url) {
-   console.log(url)
-   wx.redirectTo({ url })
+   wx.redirectTo( {url} )
  } 
  module.exports = {
    tabbar: tabbarmain,
