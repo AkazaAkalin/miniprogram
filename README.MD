@@ -1,3 +1,5 @@
+# activefaultMiniprogram
+地震活动断层微信小程序项目
 ********************************************
 1. 图片资源尽量先进行裁剪再丢到云服务器上，转换成链接资源使用
   本地图片 在images文件下 
@@ -13,7 +15,8 @@
     @import "/components/tabbar/tabbar.wxss";
 1. 组件路径在components/tabbar下
 2. 自定义的tab 文字 图标 方法的定义在 tabbar.js中 样式问题在wxss文件中修改
-2、引入依赖时js中 const tabbar = require('../../components/tabbar/tabbar.js') 并在onload中执行 tabbar.tabbar("tabBar", 0, this)
+2、引入依赖时js中 const tabbar = require('../../components/tabbar/tabbar.js') 
+   并在onload中执行 tabbar.tabbar("tabBar", 0, this)
     在对应的wxml文件中
     <import src='../../components/tabbar/tabbar.wxml'/>
     <template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

@@ -1,2 +1,4 @@
 <!--pages/page2/page2.wxml-->
 <text>pages/page2/page2.wxml</text>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

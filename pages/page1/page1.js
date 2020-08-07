@@ -8,7 +8,9 @@ Page({
   data: {
 
   },
-
+  navi(e) {
+    tabbar.navi(e.currentTarget.dataset.url)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

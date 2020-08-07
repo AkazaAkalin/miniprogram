@@ -12,6 +12,7 @@ Page({
     tabbar.tabbar("tabBar", 0, this)
   },
   navi(e) {
+    console.log(e)
     tabbar.navi(e.currentTarget.dataset.url)
   },
 })
