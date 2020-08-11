@@ -1,4 +1,7 @@
 <!--pages/page1/page1.wxml-->
-<text>pages/page1/page1.wxml</text>
+<view class="container" style="margin-top:{{statusBarHeight}}px">
+  page1
+</view>
+<view class="blank" style="height:{{tabbarHeight}}px"></view>
 <import src='../../components/tabbar/tabbar.wxml'/>
 <template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

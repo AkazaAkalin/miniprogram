@@ -5,7 +5,33 @@
     "pages/page2/page2",
     "pages/page3/page3"
   ],
+  "usingComponents": {},
+  "tabBar": {
+    "custom": true,
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "text",
+      "iconPath": "images/icon_API.png",
+      "selectedIconPath": "images/icon_API_HL.png"
+    },{
+      "pagePath": "pages/page1/page1",
+      "text": "text",
+      "iconPath": "images/icon_component.png",
+      "selectedIconPath": "images/icon_component_HL.png"
+    },{
+      "pagePath": "pages/page2/page2",
+      "text": "text",
+      "iconPath": "images/icon_component.png",
+      "selectedIconPath": "images/icon_component_HL.png"
+    },{
+      "pagePath": "pages/page3/page3",
+      "text": "text",
+      "iconPath": "images/icon_component.png",
+      "selectedIconPath": "images/icon_component_HL.png"
+    }]
+  },
   "window": {
+    "navigationStyle": "custom",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",

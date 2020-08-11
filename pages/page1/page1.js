@@ -1,15 +1,20 @@
 // pages/page1/page1.js
 const tabbar = require('../../components/tabbar/tabbar.js')
+const getTabHeight = require('../../utils/getTabbarHeight.js')
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    statusBarHeight: app.globalData.statusBarHeight,
+    tabbarHeight: 0,
   },
   navi(e) {
     tabbar.navi(e.currentTarget.dataset.url)
+    let query = wx.createSelectorQuery()
+    getTabHeight.getTabHeight(query, this) // 获取tab
   },
   /**
    * 生命周期函数--监听页面加载
