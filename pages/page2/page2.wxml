@@ -1,7 +1,0 @@
-<!--pages/page2/page2.wxml-->
-<view class="container" style="margin-top:{{statusBarHeight}}px">
-  <text>pages/page2/page2.wxml</text>
-</view>
-<view class="blank" style="height:{{tabbarHeight}}px"></view>
-<import src='../../components/tabbar/tabbar.wxml'/>
-<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

@@ -49,13 +49,57 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "动态页",
+					"pathName": "pages/dynamic/dynamic",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "地图页",
+					"pathName": "pages/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "更多",
+					"pathName": "pages/more/more",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "科普",
+					"pathName": "pages/science/science",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "标准",
+					"pathName": "pages/standard/standard",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

@@ -1,0 +1,31 @@
+.tabContianer {
+  height: 80rpx;
+  border-bottom: 4rpx solid #E8E8E8;
+  display: flex;
+  justify-content: center;
+}
+.standardBox, .documentBox {
+  width: 130rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #636E7A;
+}
+.seleted {
+  font-size: 30rpx;
+  color: #363636;
+  border-bottom: 4rpx solid #989898;
+}
+.listItemBox {
+  margin: 38rpx auto 0 ;
+  height: 140rpx;
+  width: 649rpx;
+  border-bottom: 1rpx solid #E7E7E7;
+}
+.listItem {
+  font-size: 26rpx;
+  color: #222222;
+  text-align: left;
+  line-height: 45rpx;
+}

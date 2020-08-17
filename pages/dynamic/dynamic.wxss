@@ -1,0 +1,97 @@
+.swpierContainer {
+  width: 100%;
+  height: 350rpx;
+} 
+.swiperImg {
+  width: 100%;
+  height: 350rpx;
+}
+.dynamicTab {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.dynamicTitle {
+  height: 80rpx;
+  line-height: 80rpx;
+  flex: 1;
+  font-size: 28rpx;
+  color: #636E7A;
+  text-align: center;
+}
+.dynamicTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selected {
+  color: #363636;
+  font-size: 30rpx;
+}
+.selectedLine {
+  height: 4rpx;
+  width: 130rpx;
+  background-color: #989898;
+  margin-top: -4rpx;
+}
+.underLine {
+  width: 100%;
+  height: 4rpx;
+  background: #E8E8E8;
+}
+.dynamicList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.abstractBox, .establishBox {
+  height: 188rpx;
+  width: 705rpx;
+  margin:  30rpx auto;
+  display: flex;
+}
+.abstractImgBox, .establishImgBox {
+  width: 260rpx;
+  height: 160rpx;
+}
+.abstractContentBox, .establishContentBox {
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 415rpx;
+}
+.abstractTitle, .establishTitle{
+  font-size: 26rpx;
+  color: #222222;
+}
+.abstractInfo, .establishInfo{
+  width: 415rpx;
+  display:  flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #999999;
+  position: absolute;
+  bottom: 34rpx;
+} 
+.progressBox {
+  height: 191rpx;
+  width: 705rpx;
+  margin:  20rpx auto;
+  display: flex;
+  flex-direction: column;
+}
+.progressTitle {
+  font-size: 26rpx;
+  color: #222222;
+  margin-top: 19rpx;
+}
+.progressInfo {
+  width: 415rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #999999;
+  position: absolute;
+  bottom: 28rpx;
+}

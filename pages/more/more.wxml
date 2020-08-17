@@ -1,0 +1,15 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
+<view style=" background-color: #e5e5e5;">
+  <block wx:for='{{title}}' wx:key='index'>
+    <view class="itemBox">
+      <view class="itemText">{{item}}</view>
+      <view class="imgBox">
+        <!-- <image src=""/> -->>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="blank" style="height:{{tabbarHeight}}px"></view>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

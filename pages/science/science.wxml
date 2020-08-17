@@ -1,0 +1,8 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
+<view>
+  <text>科普科普</text>
+</view>
+<view class="blank" style="height:{{tabbarHeight}}px"></view>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

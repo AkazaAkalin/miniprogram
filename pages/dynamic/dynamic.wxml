@@ -1,0 +1,71 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
+<view>
+  <view class="swpierContainer">
+    <swiper  indicator-dots= 'true'  indicator-color= '#979797'  indicator-active-color= '#0F4E95'  autoplay= 'true' circular= 'true'
+    >
+      <block wx:for="{{swiperImgs}}" wx:key='index'>
+        <swiper-item>
+          <image class="swiperImg" src="{{item}}" mode="aspectFill"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="dynamicContainer">
+    <view class="dynamicTabBox">
+      <view class="dynamicTab">
+        <view class="dynamicTitle" bindtap="changeTab" data-index='0'>
+          <view class="dynamicText {{ tabIndex == 0 ? 'selected' : ''}}">工作要闻</view>
+          <view wx:if='{{tabIndex == 0}}' class="selectedLine"></view>
+        </view>
+        <view class="dynamicTitle" bindtap="changeTab" data-index='1'>
+          <view class="dynamicText {{ tabIndex == 1 ? 'selected' : ''}}">项目进展</view>
+          <view wx:if='{{tabIndex == 1}}' class="selectedLine"></view>
+        </view>
+        <view class="dynamicTitle" bindtap="changeTab" data-index='2'>
+          <view class="dynamicText {{ tabIndex == 2 ? 'selected' : ''}}">成果展示</view>
+          <view wx:if='{{tabIndex == 2}}' class="selectedLine"></view>
+        </view>
+      </view>
+      <view class="underLine"></view>
+      <view class="dynamicList">
+        <scroll-view wx:if='{{tabIndex == 0}}'>
+          <view class="abstractBox">
+            <view class="abstractImgBox"></view>
+            <view class="abstractContentBox">
+              <view class="abstractTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
+              <view class="abstractInfo">
+                <view class="abstractInfoTime">01-01</view>
+                <view class="abstractInfoResource">来源：地震活动断层数据中心</view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+        <scroll-view wx:if='{{tabIndex == 1}}'>
+          <view class="progressBox">
+              <view class="progressTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
+              <view class="progressInfo">
+                <view class="progressInfoTime">01-01</view>
+                <view class="progressInfoResource">来源：地震活动断层数据中心</view>
+              </view>
+          </view>
+        </scroll-view>
+        <scroll-view wx:if='{{tabIndex == 2}}'>
+           <view class="establishBox">
+            <view class="establishImgBox"></view>
+            <view class="establishContentBox">
+              <view class="establishTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
+              <view class="establishInfo">
+                <view class="establishInfoTime">01-01</view>
+                <view class="establishInfoResource">来源：地震活动断层数据中心</view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="blank" style="height:{{tabbarHeight}}px"></view>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

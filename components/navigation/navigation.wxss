@@ -1,0 +1,35 @@
+.navi {
+  border-bottom: 6rpx solid #ECEDED;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  z-index: 9999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.naviTitle {
+  font-size: 30rpx;
+  color: #000000;
+  text-align: center;
+}
+.backBox {
+  position: fixed;
+  left: 30rpx;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.backIcon {
+  position: relative;
+  top:  4rpx;
+  height: 35rpx;
+  width: 35rpx;
+}
+.backText {
+  font-size: 28rpx;
+  color: #000000;
+}
+.naviBlank {
+  background-color: #333333;
+}

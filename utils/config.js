@@ -1,9 +1,9 @@
 let env = 'dev'
 let baseUrl = ''
 if(env === 'dev'){
-  baseUrl = 'https://api.douban.com'
+  baseUrl = ''
 } else if(env === 'prod'){
-  baseUrl = 'prodbase'
+  baseUrl = ''
 }
 module.exports = {
   baseUrl

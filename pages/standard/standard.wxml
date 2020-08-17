@@ -1,0 +1,35 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
+<view> 
+  <view class="tabContianer">
+    <view class="standardBox {{tab == 0 ? 'seleted':''}}" bindtap="changeTab" data-index="0">
+      <view>标准规范</view>
+    </view>
+    <view class="documentBox {{tab == 1 ? 'seleted':''}}" style="margin-left:82rpx" bindtap="changeTab" data-index='1'>
+      <view>管理文件</view>
+    </view>
+  </view>
+  <view class="listContainer">
+    <view wx:if='{{tab == 0}}'>
+      <scroll-view scroll-y='true'>
+        <block wx:for='{{dataList}}' wx:key='index'>
+          <view class="listItemBox">
+            <view class="listItem">{{item.text}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view wx:if='{{tab == 1}}'>
+      <scroll-view scroll-y='true'>
+         <block wx:for='{{dataList}}' wx:key='index'>
+          <view class="listItemBox">
+            <view class="listItem">{{item.text}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<view class="blank" style="height:{{tabbarHeight}}px"></view>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

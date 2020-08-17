@@ -1,5 +1,5 @@
 const getTabHeight = (query, context) => {
-  query.select('.tabBar').boundingClientRect(rect => {
+  query.select('.barBackGround').boundingClientRect(rect => {
     context.setData({
       tabbarHeight: rect.height
     })
