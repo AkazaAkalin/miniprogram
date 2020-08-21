@@ -30,10 +30,10 @@
       <view class="underLine"></view>
       <view class="dynamicList">
         <scroll-view wx:if='{{tabIndex == 0}}'>
-          <view class="abstractBox">
+          <view class="abstractBox" bindtap="goDetail" data-type="abstract" data-id='0'>
             <view class="abstractImgBox"></view>
             <view class="abstractContentBox">
-              <view class="abstractTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
+              <view class="abstractTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
               <view class="abstractInfo">
                 <view class="abstractInfoTime">01-01</view>
                 <view class="abstractInfoResource">来源：地震活动断层数据中心</view>
@@ -42,8 +42,8 @@
           </view>
         </scroll-view>
         <scroll-view wx:if='{{tabIndex == 1}}'>
-          <view class="progressBox">
-              <view class="progressTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
+          <view class="progressBox"  bindtap="goDetail" data-type="progress"  data-id='0'>
+              <view class="progressTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
               <view class="progressInfo">
                 <view class="progressInfoTime">01-01</view>
                 <view class="progressInfoResource">来源：地震活动断层数据中心</view>
@@ -51,7 +51,7 @@
           </view>
         </scroll-view>
         <scroll-view wx:if='{{tabIndex == 2}}'>
-           <view class="establishBox">
+           <view class="establishBox"  bindtap="goDetail" data-type="establish"  data-id='0'>
             <view class="establishImgBox"></view>
             <view class="establishContentBox">
               <view class="establishTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
@@ -62,6 +62,7 @@
             </view>
           </view>
         </scroll-view>
+        <loadingIcon show='{{showLoading}}' text='{{text}}'/>
       </view>
     </view>
   </view>

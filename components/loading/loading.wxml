@@ -1,0 +1,6 @@
+<view class='loadingBox' wx:if='{{show}}'>
+  <view class="loadingText">加载中</view>
+  <view class="imgBox">
+    <image class="img" src="./loading.png"/>
+  </view>
+</view>

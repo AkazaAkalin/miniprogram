@@ -35,7 +35,6 @@
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: #ffffff;
 }
 .mapContainer {
   height: 96rpx;

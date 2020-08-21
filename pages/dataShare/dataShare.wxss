@@ -1,3 +1,16 @@
+.title {
+  margin-top: 31rpx;
+  margin-bottom: 33rpx;
+  font-size: 34rpx;
+  color: #222222;
+  text-align: center;
+}
+.imgBox {
+  height: 465rpx;
+  width: 660rpx;
+  margin: 0 auto;
+  background-color: pink;
+}
 .smallBox {
   height: 14rpx;
   width: 6rpx;
@@ -15,7 +28,7 @@
   background-color:#6492FF;
   margin: 0 6rpx;
 }
-.title {
+.subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,4 +51,13 @@
 }
 .phoneNumber, .emailNumber {
   margin-left: 30rpx;
+}
+.documentBox {
+  font-size: 26rpx;
+  color: #222222;
+  margin-left: 88rpx;
+  margin-top: 22rpx;
+}
+.doc {
+  height: 100rpx;
 }

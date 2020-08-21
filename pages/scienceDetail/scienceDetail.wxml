@@ -1,0 +1,3 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
+<view class="">科普详情页接口</view>

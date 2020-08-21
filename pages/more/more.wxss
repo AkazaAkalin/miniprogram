@@ -1,7 +1,23 @@
+page{
+  background-color: #f7f7f7;
+}
 .itemBox {
   height: 88rpx;
-  margin-top: 17rpx;
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 17rpx;
+  background-color: #ffffff;
+}
+.itemText{
+  font-size: 30rpx;
+  color: #000000;
+  margin-left: 53rpx;
+}
+.imgBox {
+  margin-right: 30rpx;
+}
+.itemImg {
+  width: 16rpx;
+  height: 25rpx;
 }

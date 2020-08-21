@@ -1,7 +1,7 @@
 .navi {
   border-bottom: 6rpx solid #ECEDED;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff; /* TODO*/
   z-index: 9999;
   width: 100%;
   position: fixed;
@@ -11,6 +11,7 @@
   font-size: 30rpx;
   color: #000000;
   text-align: center;
+  font-weight: bold;
 }
 .backBox {
   position: fixed;
@@ -18,18 +19,15 @@
   top: 0;
   display: flex;
   align-items: center;
-  padding: 0 20rpx;
 }
 .backIcon {
   position: relative;
-  top:  4rpx;
+  top: 6rpx;
   height: 35rpx;
-  width: 35rpx;
+  width: 20rpx;
+  margin-right: 20rpx;
 }
 .backText {
   font-size: 28rpx;
   color: #000000;
-}
-.naviBlank {
-  background-color: #333333;
 }

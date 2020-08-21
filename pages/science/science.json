@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "pageOrientation": "auto",
+  "navigationStyle":"custom"
+ 
 }

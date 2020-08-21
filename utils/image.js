@@ -6,6 +6,12 @@ const images =  {
   // 其他页面的图片资源（举例）
   other: {
     otherImg: 'otherImg'
+  },
+  more: {
+    right: '../../images/more/right.png'
+  },
+  suggestionFeedback: {
+    tip: '../../images/suggestionFeedback/tip.png'
   }
 }
 module.exports = {

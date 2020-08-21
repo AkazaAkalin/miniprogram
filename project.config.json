@@ -98,6 +98,47 @@
 					"pathName": "pages/standard/standard",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "中心简介",
+					"pathName": "pages/centerDesc/centerDesc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/suggestionFeedback/suggestionFeedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "设置",
+					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "数据共享",
+					"pathName": "pages/dataShare/dataShare",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "标准详情页",
+					"pathName": "pages/standardDetail/standardDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "动态详情页",
+					"pathName": "pages/dynamicDetail/dynamicDetail",
+					"scene": null
 				}
 			]
 		}

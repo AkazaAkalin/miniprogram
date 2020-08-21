@@ -1,0 +1,25 @@
+.loadingBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingText {
+  font-size: 24rpx;
+  color: #999;
+}
+.imgBox {
+  width: 24rpx;
+  height: 24rpx;
+  animation: rotate 1s infinite;
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes rotate {
+  0%{-webkit-transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}

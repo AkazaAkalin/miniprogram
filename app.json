@@ -5,9 +5,13 @@
     "pages/map/map",
     "pages/science/science",
     "pages/more/more",
-    "pages/detail/detail",
-    "pages/webView/webView",
-    "pages/suggestionFeedback/suggestionFeedback"
+    "pages/suggestionFeedback/suggestionFeedback",
+    "pages/centerDesc/centerDesc",
+    "pages/dataShare/dataShare",
+    "pages/dynamicDetail/dynamicDetail",
+    "pages/scienceDetail/scienceDetail",
+    "pages/standardDetail/standardDetail",
+    "pages/webView/webView"
   ],
   "usingComponents": {},
   "tabBar": {
@@ -32,8 +36,12 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black",
-    "backgroundColorTop": "#333333"
+    "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

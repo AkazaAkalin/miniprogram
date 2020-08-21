@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "datepicker": "miniprogram-datepicker"
+    "datepicker": "miniprogram-datepicker",
+    "loadingIcon": "../../components/loading/loading"
   }
 }

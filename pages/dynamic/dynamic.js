@@ -13,17 +13,18 @@ Page({
     naviHeight: app.globalData.naviHeight, // 导航栏高度
     tabIndex: 0,  //tab的顺序指数 从0计数
     swiperImgs:['../../images/test/s1.jpg','../../images/test/s2.jpg','../../images/test/s3.jpg'], // 轮播图片数组
+    showLoading: true
   },
   //事件处理函数
   onLoad: function () {
     let pages = getCurrentPages()
-    navigator.navigator(this, '动态', pages)
+    navigator.navigator(this, '地震活动断层探察数据中心', pages)
     tabbar.tabbar("tabBar", 0, this) // 这是tab为当前选中页， 0代表第一个tab
     let query = wx.createSelectorQuery()
     getTabHeight.getTabHeight(query, this) // 获取tab高度
   },
   navi(e) {
-    tabbar.navi(e.currentTarget.dataset.url)
+    tabbar.navi(e.currentTarget.dataset.url, getCurrentPages()[0].route)
   },
   // 一个测试请求的demo
   // demo() {
@@ -43,4 +44,10 @@ Page({
     let tabIndex = e.currentTarget.dataset.index
     this.setData({tabIndex}) 
   },
+  goDetail(e) {
+    let {type, id} = e.currentTarget.dataset
+    wx.navigateTo({
+      url: `/pages/dynamicDetail/dynamicDetail?type=${type}&id=${id}`,
+    })
+  }
 })

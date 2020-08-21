@@ -26,13 +26,14 @@ function tabbarinit() {
     "iconPath": "../../images/tabBar/scienceoff.png",
     "selectedIconPath": "../../images/tabBar/scienceon.png",
     "text": "科普"
-    },{
+    },
+    {
     "current": 0,
     "tabBarPath": "/pages/more/more",
     "iconPath": "../../images/tabBar/moreoff.png",
     "selectedIconPath": "../../images/tabBar/moreon.png",
     "text": "更多"
-    }
+    }, 
   ]
  }
  //tabbar 主入口
@@ -45,8 +46,10 @@ function tabbarinit() {
     bindData[bindName] = otabbar
     that.setData({ bindData });
   }
- function navi(url) {
-   url === '/pages/map/map' ? wx.navigateTo( {url} ) : wx.switchTab( {url} )
+ function navi(url, currentPage) {
+   if(`/${currentPage}` !== url) {
+     url === '/pages/map/map' ? wx.navigateTo( {url} ) : wx.switchTab( {url} )
+   }
  } 
  module.exports = {
    tabbar: tabbarmain,

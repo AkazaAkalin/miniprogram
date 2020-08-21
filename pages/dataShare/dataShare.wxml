@@ -1,0 +1,36 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
+<view class="title">活动断层数据共享流程</view>
+<view class="imgBox"></view>
+<view class="subtitle">
+    <view class="smallBox"></view>
+    <view class="midBox"></view>
+    <view class="bigBox"></view>
+    <view class="titleText">联系方式</view>
+    <view class="bigBox"></view>
+    <view class="midBox"></view>
+    <view class="smallBox"></view>
+</view>
+<view class="info">
+  <view class="phone">
+    <view class="phoneText">数据共享咨询:</view>
+    <view class="phoneNumber">010-69941176</view>
+  </view>
+  <view class="email">
+    <view class="emailText">邮箱地址: </view>
+    <view class="emailNumber">activefault_mo@vip.163.com</view>
+  </view>
+</view>  
+<view class="subtitle">
+    <view class="smallBox"></view>
+    <view class="midBox"></view>
+    <view class="bigBox"></view>
+    <view class="titleText">常用文件下载</view>
+    <view class="bigBox"></view>
+    <view class="midBox"></view>
+    <view class="smallBox"></view>
+</view>
+<view class="documentBox">
+  <view class="doc">数据共享应用证明</view>
+  <view class="doc">数据共享申请表</view>
+</view>

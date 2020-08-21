@@ -46,7 +46,7 @@
   align-items: center;
 }
 .abstractBox, .establishBox {
-  height: 188rpx;
+  height: 160rpx;
   width: 705rpx;
   margin:  30rpx auto;
   display: flex;
@@ -54,6 +54,7 @@
 .abstractImgBox, .establishImgBox {
   width: 260rpx;
   height: 160rpx;
+  background-color: pink;
 }
 .abstractContentBox, .establishContentBox {
   margin-left: 30rpx;
@@ -64,6 +65,12 @@
 .abstractTitle, .establishTitle{
   font-size: 26rpx;
   color: #222222;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 .abstractInfo, .establishInfo{
   width: 415rpx;
@@ -85,6 +92,12 @@
   font-size: 26rpx;
   color: #222222;
   margin-top: 19rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 .progressInfo {
   width: 415rpx;

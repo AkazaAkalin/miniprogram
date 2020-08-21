@@ -1,12 +1,12 @@
 <template name="navigator">
   <view class='navi' style="height:{{naviData.height}}px">
-    <view class="backBox" style="margin-top:{{naviData.margin}}px" bindtap='back' wx:if="{{naviData.showBack}}">
+    <view class="backBox" style="margin-top:{{naviData.margin}}px; padding-top: 16rpx;" bindtap='back' wx:if="{{naviData.showBack}}">
       <view class="backIconBox">
-        <image class="backIcon" src="../../images/navi/backIcon.png"  mode="aspectFill"/>
+        <image class="backIcon" src="../../images/navi/left.png"  mode="aspectFill"/>
       </view>
       <view class="backText">返回</view>
     </view>
-    <view class="naviTitle" style="margin-top:{{naviData.margin}}px">
+    <view class="naviTitle" style="margin-top:{{naviData.margin}}px; padding-top: 16rpx;">
       {{naviData.title}}
     </view>
   </view>

@@ -1,4 +1,3 @@
-// pages/detail.js
 const app = getApp()
 const images = require('../../utils/image')
 const navigator = require('../../components/navigation/navigation')
@@ -7,8 +6,9 @@ Page({
 
   },
   onLoad: function (options) {
+    console.log(options)
     let pages = getCurrentPages() // 获取当前的页面栈
-    navigator.navigator(this, '详情', pages)
+    navigator.navigator(this, '标准详情', pages)
   },
 
   // 左上角返回方法 
