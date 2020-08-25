@@ -9,7 +9,7 @@
 }
 .naviTitle {
   font-size: 30rpx;
-  color: #000000;
+  color: #FFF;
   text-align: center;
   font-weight: bold;
 }
@@ -29,5 +29,5 @@
 }
 .backText {
   font-size: 28rpx;
-  color: #000000;
+  color: #fff;
 }

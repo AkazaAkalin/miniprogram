@@ -35,8 +35,8 @@
     "navigationStyle": "custom",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "permission": {
