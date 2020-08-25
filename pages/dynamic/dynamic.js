@@ -50,7 +50,7 @@ Page({
     if(tab == 0) {
       url = 'work_news_api?cid=31';
       request.request(url, data).then(res => {
-        // console.log(res.data.data.news_list)
+        console.log(res.data)
         let swiperImgs = []
         res.data.data.carousel.forEach(item => {
           swiperImgs.push(item.cover_pc_url)
