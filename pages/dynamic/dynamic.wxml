@@ -51,7 +51,7 @@
                 <view class="progressTitle">{{item.title}}</view>
                 <view class="progressInfo">
                   <view class="progressInfoTime">{{item.published_time}}</view>
-                  <view class="progressInfoResource">{{item.source}}</view>
+                  <view class="progressInfoResource">来源：{{item.source}}</view>
                 </view>
             </view>
           </block>

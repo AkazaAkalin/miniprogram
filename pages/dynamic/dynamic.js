@@ -90,6 +90,9 @@ Page({
     if(this.nextUrl) {
       let url = this.nextUrl.replace(/work_news/, "work_news_api")
       request.request(url).then(res => {
+        res.data.data.news_list.forEach(item =>{
+          item.published_time = item.published_time.slice(0, 10)
+        })
         let newList = res.data.data.news_list
         this.nextUrl = res.data.data.pages.next_page_url || ''
         if(this.data.tabIndex == 0) {
