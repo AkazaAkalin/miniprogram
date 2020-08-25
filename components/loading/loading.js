@@ -5,8 +5,6 @@ Component({
       type: Boolean,
     },
   },
-  data: {
-  },
-  methods: {
-  }
+  data: {},
+  methods: {}
 })

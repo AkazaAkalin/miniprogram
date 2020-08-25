@@ -1,7 +1,7 @@
 .navi {
-  border-bottom: 6rpx solid #ECEDED;
+  /* border-bottom: 6rpx solid #ECEDED; */
   box-sizing: border-box;
-  background-color: #fff; /* TODO*/
+  background-color: #3B49EE; /* TODO*/
   z-index: 9999;
   width: 100%;
   position: fixed;

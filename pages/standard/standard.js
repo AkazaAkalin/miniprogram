@@ -2,14 +2,16 @@ const tabbar = require('../../components/tabbar/tabbar.js')
 const getHeight = require('../../utils/getHeight.js')
 const getTabHeight = require('../../utils/getTabbarHeight')
 const navigator = require('../../components/navigation/navigation')
+const request = require('../../utils/request')
 const app = getApp()
 Page({
   data: {
     tab: 0, // 当前的页面tab指数 0代表标准规范 1代表管理文件
     scrollHeight: 0,
-    dataList: [{text:'DB/T 83-2020 活动断层探察 数据库质量检测'},
-    {text:'DB/T 53-2013 1：50000活动断层填图'},{text:'我是消息列表3我是消息列表3我是消息列表3我是消息列表3我是消息列表3'},{text:'我是消息列表4'},{text:'我是消息列表5'},{text:'我是消息列表6'},{text:'我是消息列表7'},{text:'我是消息列表8'},{text:'我是消息列表9'},{text:'我是消息列表9'},{text:'我是消息列表9'},{text:'我是消息列表9'},{text:'我是消息列表999'}]
+    standardList: [],
+    dataList: []
   },
+  nextUrl: '',
   navi(e) {
     tabbar.navi(e.currentTarget.dataset.url,  getCurrentPages()[0].route)
   },
@@ -20,11 +22,13 @@ Page({
     let query = wx.createSelectorQuery()
     getTabHeight.getTabHeight(query, this) // 获取tabBarHeight
     this.setScollHeight(query) // 设置滚动区域的高度
+    this.getData(0)
   },
   changeTab(e) {
     let tab = e.currentTarget.dataset.index
     if (this.data.tab !== tab ) {
       this.setData({ tab })
+      this.getData(tab)
     }
   },
   setScollHeight(query) {
@@ -41,5 +45,47 @@ Page({
     wx.navigateTo({
       url: `/pages/standardDetail/standardDetail?type=${type}&id=${id}`,
     })
+  },
+  getData(tab){
+    if(tab == 0) {
+      let url = 'standard_list_api?cid=36'
+      request.request(url).then(res => {
+        console.log(res.data.data)
+        this.nextUrl = res.data.data.pages.next_page_url || ''
+        let standardList = res.data.data.news_list
+        standardList.forEach(item => {
+          item.published_time = item.published_time.slice(0, 10)
+        })
+        console.log(standardList)
+        this.setData({ standardList })
+      })
+    } else if(tab == 1) {
+      let url = 'standard_list_api?cid=34'
+      request.request(url).then(res => {
+        console.log(res.data.data)
+        this.nextUrl = res.data.data.pages.next_page_url || ''
+        let dataList = res.data.data.news_list
+        dataList.forEach(item => {
+          item.published_time = item.published_time.slice(0, 10)
+        })
+        this.setData({ dataList })
+      })
+    }
+  },
+  load() {
+    if(this.nextUrl) {
+      let url = this.nextUrl.replace(/standard_list/, "/standard_list_api")
+      request.request(url).then(res => {
+        let newList = res.data.data.news_list
+        this.nextUrl = res.data.data.pages.next_page_url || ''
+        if(this.data.tab == 0) {
+          this.setData({standardList: [...this.data.standardList,...newList]})
+        } else if (this.data.tab == 1) {
+          this.setData({dataList: [...this.data.dataList,...newList]})
+        }
+      })
+    } else {
+      // LAST PAGE
+    }
   }
 })

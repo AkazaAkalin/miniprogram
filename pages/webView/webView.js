@@ -1,11 +1,9 @@
 Page({
   data: {
-    webUrl: 'http://www.activefault-datacenter.cn/attachments/cedpc/www/static/202004/T20200407143755_28412.pdf'
+    webUrl: ''
   },
   onLoad: function (options) {
-
+    console.log(decodeURI(options.url))
+    this.setData({webUrl: options.url})
   },
-  onShareAppMessage: function () {
-
-  }
 })

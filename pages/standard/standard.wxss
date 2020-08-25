@@ -28,4 +28,14 @@
   color: #222222;
   text-align: left;
   line-height: 45rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 20rpx;
 }

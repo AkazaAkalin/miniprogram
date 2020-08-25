@@ -1,7 +1,9 @@
 <import src='../../components/navigation/navigation.wxml'/>
 <template is="navigator" data="{{naviData}}"/>
 <view class="title">活动断层数据共享流程</view>
-<view class="imgBox"></view>
+<view class="imgBox">
+  <image class="img" src="./dataShare.png"></image>
+</view>
 <view class="subtitle">
     <view class="smallBox"></view>
     <view class="midBox"></view>

@@ -7,12 +7,12 @@
         <view class="itemBox">
           <view class="item" bindtap="goDetail" data-id='{{item.id}}'>
             <view class="itemTitle">{{item.title}}</view>
-            <view class="itemPubTime">{{item.pubTime}}</view>
+            <view class="itemPubTime">发布时间：{{item.published_time}}</view>
             <view class="itemContent">
               <view class="itemImgBox">
-                <image></image>
+                <image src="{{item.cover_pc_url}}"></image>
               </view>
-              <view class="itemText">{{item.content}}</view>
+              <view class="itemText">{{item.excerpt}}</view>
             </view>
           </view>
         </view>

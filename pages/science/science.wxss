@@ -39,7 +39,6 @@
   width: 126rpx;
   height: 100rpx;
   margin-right: 24rpx;
-  background-color: pink;
 }
 .itemImgBox image{
   width: 100%;

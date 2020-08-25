@@ -11,19 +11,27 @@
   </view>
   <view class="listContainer">
     <view wx:if='{{tab == 0}}'>
-      <scroll-view scroll-y='true' style="height:{{scrollHeight}}px">
-        <block wx:for='{{dataList}}' wx:key='index'>
-          <view class="listItemBox" bindtap="goDetail" data-id='0' data-type='sta'>
-            <view class="listItem">{{item.text}}</view>
+      <scroll-view scroll-y style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+        <block wx:for='{{standardList}}' wx:key='index'>
+          <view class="listItemBox" bindtap="goDetail" data-id='{{item.id}}' data-type='sta'>
+            <view class="listItem">{{item.title}}</view>
+            <view class="itemInfo">
+              <view>{{item.published_time}}</view>
+              <view wx:if='{{item.source}}'>来源：{{item.source}}</view>
+            </view>
           </view>
         </block>
       </scroll-view>
     </view>
     <view wx:if='{{tab == 1}}'>
-      <scroll-view scroll-y='true' style="height:{{scrollHeight}}px">
+      <scroll-view scroll-y style="height:{{scrollHeight}}px" bindscrolltolower='load'>
          <block wx:for='{{dataList}}' wx:key='index'>
-          <view class="listItemBox" bindtap="goDetail" data-id='0' data-type='doc'>
-            <view class="listItem">{{item.text}}</view>
+          <view class="listItemBox" bindtap="goDetail" data-id='{{item.id}}' data-type='doc'>
+            <view class="listItem">{{item.title}}</view>
+            <view class="itemInfo">
+              <view>{{item.published_time}}</view>
+              <view wx:if='{{item.source}}'>来源：{{item.source}}</view>
+            </view>
           </view>
         </block>
       </scroll-view>

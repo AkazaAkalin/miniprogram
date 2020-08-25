@@ -6,7 +6,8 @@ Page({
   data: {
     statusBarHeight: app.globalData.statusBarHeight,
     tabbarHeight: 0,
-    webUrl:'http://www.activefault-datacenter.cn/',
+    // webUrl:'http://www.activefault-datacenter.cn/',
+    webUrl: 'https://mp.weixin.qq.com'
   },
   navi(e) {
     tabbar.navi(e.currentTarget.dataset.url)

@@ -1,6 +1,4 @@
 const navigator = require('../../components/navigation/navigation')
-const images = require('../../utils/image')
-const app = getApp()
 Page({
   data: {
     centerImg: 'images.images.centerDesc.centerImg'

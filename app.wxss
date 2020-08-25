@@ -1,6 +1,7 @@
 /**app.wxss**/
 @import "/components/tabbar/tabbar.wxss"; 
 @import "/components/navigation/navigation.wxss";
+@import "/wxParse/wxParse.wxss";
 .container {
   display: flex;
   flex-direction: column;

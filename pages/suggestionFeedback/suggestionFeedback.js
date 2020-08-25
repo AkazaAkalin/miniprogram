@@ -1,5 +1,4 @@
-// pages/info/info.js
-const app = getApp()
+
 const images = require('../../utils/image')
 const navigator = require('../../components/navigation/navigation')
 Page({

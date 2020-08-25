@@ -25,8 +25,8 @@
     ● 承担地震活动断层探察专家组的日常管理，包括组织开展评估、论证、审查等；
     ● 完成震害防御司交办的其他事项。
   </text> 
-  <view class="centerImgBox">
-    <!-- TODO 加图片 -->
+  <view>
+    <image class="centerImgBox" src="./duty.png"></image>
   </view>
   <view class="subtitle">
     <view class="smallBox"></view>
@@ -49,8 +49,8 @@
     </view> 
     邮箱地址：activefault_mo@vip.163.com
   </view>
-  <view class="bottomImgBox"> 
-  <!-- TODO 加图片 -->
+  <view> 
+    <image class="bottomImgBox" src="./map.png"></image>
   </view>
 </view>
 

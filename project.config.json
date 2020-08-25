@@ -32,7 +32,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wxc776d54fc1920d09",
+	"appid": "wx8812e1f440c37954",
 	"projectname": "activefualtMiniprogram",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -138,6 +138,13 @@
 					"id": -1,
 					"name": "动态详情页",
 					"pathName": "pages/dynamicDetail/dynamicDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "scienceDetail",
+					"pathName": "pages/scienceDetail/scienceDetail",
 					"scene": null
 				}
 			]

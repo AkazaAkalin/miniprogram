@@ -54,9 +54,9 @@
 .abstractImgBox, .establishImgBox {
   width: 260rpx;
   height: 160rpx;
-  background-color: pink;
 }
 .abstractContentBox, .establishContentBox {
+  position: relative;
   margin-left: 30rpx;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,10 @@
   font-size: 22rpx;
   color: #999999;
   position: absolute;
-  bottom: 34rpx;
+  bottom: 4rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 } 
 .progressBox {
   height: 191rpx;
@@ -87,6 +90,7 @@
   margin:  20rpx auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .progressTitle {
   font-size: 26rpx;

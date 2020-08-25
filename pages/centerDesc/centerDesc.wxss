@@ -48,7 +48,6 @@
   height: 340rpx;
   width: 660rpx;
   margin: 30rpx auto;
-  background-color: pink;
 }
 .contact {
   width: 661rpx;
@@ -61,5 +60,4 @@
   height: 515rpx;
   width: 655rpx;
   margin: 22rpx auto 0;
-  background-color: pink;
 }

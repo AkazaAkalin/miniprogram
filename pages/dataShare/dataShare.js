@@ -2,6 +2,7 @@
 const app = getApp()
 const images = require('../../utils/image')
 const navigator = require('../../components/navigation/navigation')
+const request = require('../../utils/request')
 Page({
   data: {
 
@@ -9,11 +10,17 @@ Page({
   onLoad: function (options) {
     let pages = getCurrentPages() // 获取当前的页面栈
     navigator.navigator(this, '数据共享', pages)
+    this.getData()
   },
 
   // 左上角返回方法 
   back: function() { 
     navigator.back(getCurrentPages())
   },
-
+  getData() {
+    let url = 'data_share_api'
+    request.request(url).then(res => {
+      console.log(res)
+    })
+  }
 })

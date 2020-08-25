@@ -1,1 +1,4 @@
 /* pages/detail.wxss */
+.wxParse-img{
+  display: flex;
+}

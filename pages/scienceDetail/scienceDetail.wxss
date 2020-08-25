@@ -1,1 +1,4 @@
 /* pages/scienceDetail/scienceDetail.wxss */
+.wxParse-img{
+  display: flex;
+}

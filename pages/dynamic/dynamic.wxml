@@ -29,38 +29,48 @@
       </view>
       <view class="underLine"></view>
       <view class="dynamicList">
-        <scroll-view wx:if='{{tabIndex == 0}}'>
-          <view class="abstractBox" bindtap="goDetail" data-type="abstract" data-id='0'>
-            <view class="abstractImgBox"></view>
-            <view class="abstractContentBox">
-              <view class="abstractTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
-              <view class="abstractInfo">
-                <view class="abstractInfoTime">01-01</view>
-                <view class="abstractInfoResource">来源：地震活动断层数据中心</view>
+        <scroll-view scroll-y wx:if='{{tabIndex == 0}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+          <block wx:for='{{dynamicList}}' wx:key='index'>
+            <view class="abstractBox" bindtap="goDetail" data-type="abstract" data-id='{{item.id}}'>
+              <view>
+                <image class="abstractImgBox" src="{{item.cover_pc_url}}"></image>
+              </view>
+              <view class="abstractContentBox">
+                <view class="abstractTitle">{{item.title}}</view>
+                <view class="abstractInfo">
+                  <view class="abstractInfoTime">{{item.published_time}}</view>
+                  <view class="abstractInfoResource">来源：{{item.source}}</view>
+                </view>
               </view>
             </view>
-          </view>
+          </block>
         </scroll-view>
-        <scroll-view wx:if='{{tabIndex == 1}}'>
-          <view class="progressBox"  bindtap="goDetail" data-type="progress"  data-id='0'>
-              <view class="progressTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
-              <view class="progressInfo">
-                <view class="progressInfoTime">01-01</view>
-                <view class="progressInfoResource">来源：地震活动断层数据中心</view>
+        <scroll-view scroll-y wx:if='{{tabIndex == 1}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+          <block wx:for='{{progressList}}' wx:key='index'>
+            <view class="progressBox"  bindtap="goDetail" data-type="progress"  data-id='{{item.id}}'>
+                <view class="progressTitle">{{item.title}}</view>
+                <view class="progressInfo">
+                  <view class="progressInfoTime">{{item.published_time}}</view>
+                  <view class="progressInfoResource">{{item.source}}</view>
+                </view>
+            </view>
+          </block>
+        </scroll-view>
+        <scroll-view scroll-y wx:if='{{tabIndex == 2}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+          <block wx:for="{{establishList}}" wx:key='index'>
+            <view class="establishBox"  bindtap="goDetail" data-type="establish"  data-id='{{item.id}}'>
+              <view>
+                <image class="establishImgBox" src="{{item.cover_pc_url}}"></image>
               </view>
-          </view>
-        </scroll-view>
-        <scroll-view wx:if='{{tabIndex == 2}}'>
-           <view class="establishBox"  bindtap="goDetail" data-type="establish"  data-id='0'>
-            <view class="establishImgBox"></view>
-            <view class="establishContentBox">
-              <view class="establishTitle">2019年度活动断层探察项目检查暨重点工作研讨会在京召开</view>
-              <view class="establishInfo">
-                <view class="establishInfoTime">01-01</view>
-                <view class="establishInfoResource">来源：地震活动断层数据中心</view>
+              <view class="establishContentBox">
+                <view class="establishTitle">{{item.title}}</view>
+                <view class="establishInfo">
+                  <view class="establishInfoTime">{{item.published_time}}</view>
+                  <view class="establishInfoResource">来源：{{item.source}}</view>
+                </view>
               </view>
             </view>
-          </view>
+          </block>
         </scroll-view>
         <loadingIcon show='{{showLoading}}' text='{{text}}'/>
       </view>
