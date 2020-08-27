@@ -15,11 +15,11 @@ Page({
   navi(e) {
     tabbar.navi(e.currentTarget.dataset.url,  getCurrentPages()[0].route)
   },
-  onLoad: function (options) {
+  onLoad: function () {
     let pages = getCurrentPages()
+    let query = wx.createSelectorQuery()
     navigator.navigator(this, '地震活动断层探察数据中心', pages) // 设置当前导航
     tabbar.tabbar("tabBar", 1, this) // 设置当前tab页
-    let query = wx.createSelectorQuery()
     getTabHeight.getTabHeight(query, this) // 获取tabBarHeight
     this.setScollHeight(query) // 设置滚动区域的高度
     this.getData(0)
@@ -84,8 +84,6 @@ Page({
           this.setData({dataList: [...this.data.dataList,...newList]})
         }
       })
-    } else {
-      // LAST PAGE
     }
   }
 })

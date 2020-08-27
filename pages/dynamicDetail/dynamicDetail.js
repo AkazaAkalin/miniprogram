@@ -1,4 +1,3 @@
-// pages/dynamicDetail.js
 const navigator = require('../../components/navigation/navigation')
 const request = require('../../utils/request')
 var WxParse = require('../../wxParse/wxParse.js')

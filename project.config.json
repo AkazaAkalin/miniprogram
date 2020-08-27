@@ -26,12 +26,13 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
+		"bundle": true,
 		"useIsolateContext": true,
 		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
+	"libVersion": "2.3.2",
 	"appid": "wx8812e1f440c37954",
 	"projectname": "activefualtMiniprogram",
 	"debugOptions": {

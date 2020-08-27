@@ -2,11 +2,8 @@ const tabbar = require('../../components/tabbar/tabbar.js')
 const getTabHeight = require('../../utils/getTabbarHeight.js')
 const navigator = require('../../components/navigation/navigation')
 const images = require('../../utils/image')
-const app = getApp()
 Page({
   data: {
-    statusBarHeight: app.globalData.statusBarHeight, // 状态栏高度
-    naviHeight: app.globalData.naviHeight, // 导航栏高度
     right: images.images.more.right,
     title: [
       {name:'中心简介', url:'/pages/centerDesc/centerDesc',},
@@ -18,7 +15,7 @@ Page({
   navi(e) {
     tabbar.navi(e.currentTarget.dataset.url,  getCurrentPages()[0].route)
   },
-  onLoad: function (options) {
+  onLoad: function () {
     let pages = getCurrentPages()
     navigator.navigator(this, '更多', pages) // 设置导航
     tabbar.tabbar("tabBar", 4, this) // 设置底部tab页
@@ -31,9 +28,6 @@ Page({
       wx.openSetting({
         success (res) {
           console.log(res.authSetting)
-        },
-        fail(res) {
-          // console.log(res)
         }
       })
     } else {

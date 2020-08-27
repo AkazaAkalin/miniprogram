@@ -1,4 +1,3 @@
-
 const navigator = require('../../components/navigation/navigation')
 const request = require('../../utils/request')
 var WxParse = require('../../wxParse/wxParse.js')
@@ -8,14 +7,14 @@ Page({
   },
   type:'',
   id:'',
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.type = options.type 
     this.id = options.id
     let pages = getCurrentPages() // 获取当前的页面栈
     navigator.navigator(this, '地震活动断层探察数据中心', pages)
     this.getData()
   },
-  getData(){
+  getData() {
     let url = `standard_detail_api/${this.id}`
     request.request(url).then(res => {
       console.log(res.data.data.news_info)
@@ -48,5 +47,4 @@ Page({
       url: `/pages/webView/webView?url=${url}`,
     })
   }
-
 })

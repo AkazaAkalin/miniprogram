@@ -8,11 +8,11 @@ Page({
   data: {
     dataList:[],
   },
-  onLoad: function (options) {
+  onLoad: function () {
     let pages = getCurrentPages()
+    let query = wx.createSelectorQuery()
     navigator.navigator(this, '地震活动断层探察数据中心', pages)
     tabbar.tabbar("tabBar", 3, this)
-    let query = wx.createSelectorQuery()
     getTabHeight.getTabHeight(query, this) // 获取tab
     this.setScollHeight(query)
     this.getData()

@@ -2,9 +2,7 @@ const navigator = require('../../components/navigation/navigation')
 const request = require('../../utils/request')
 var WxParse = require('../../wxParse/wxParse.js')
 Page({
-  data: {
-
-  },
+  data: {},
   id: '',
   onLoad: function (options) {
     this.id = options.id
@@ -12,7 +10,6 @@ Page({
     navigator.navigator(this, '地震活动断层探察数据中心', pages)
     this.getData()
   },
-
   // 左上角返回方法 
   back: function() { 
     navigator.back(getCurrentPages())
@@ -35,7 +32,6 @@ Page({
     })
   },
   wxParseTagATap(e) {
-    // console.log(e.currentTarget.dataset.src)
     let url = e.currentTarget.dataset.src
     wx.navigateTo({
       url: `/pages/webView/webView?url=${url}`,
