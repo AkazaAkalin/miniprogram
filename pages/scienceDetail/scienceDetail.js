@@ -1,6 +1,7 @@
 const navigator = require('../../components/navigation/navigation')
 const request = require('../../utils/request')
 var WxParse = require('../../wxParse/wxParse.js')
+const check_grey = require('../../utils/checkGrey')
 Page({
   data: {},
   id: '',
@@ -9,6 +10,7 @@ Page({
     let pages = getCurrentPages() // 获取当前的页面栈
     navigator.navigator(this, '地震活动断层探察数据中心', pages)
     this.getData()
+    check_grey.is_grey(this) // 置灰
   },
   // 左上角返回方法 
   back: function() { 

@@ -2,14 +2,16 @@ const tabbar = require('../../components/tabbar/tabbar.js')
 const getTabHeight = require('../../utils/getTabbarHeight.js')
 const navigator = require('../../components/navigation/navigation')
 const images = require('../../utils/image')
+const check_grey = require('../../utils/checkGrey')
 Page({
   data: {
     right: images.images.more.right,
     title: [
-      {name:'中心简介', url:'/pages/centerDesc/centerDesc',},
-      {name:'数据共享', url:'/pages/dataShare/dataShare',},
-      {name:'设置', url:'/pages/setting/setting',},
-      {name:'意见反馈', url:'/pages/suggestionFeedback/suggestionFeedback',}
+      {name:'中心简介', url:'/pages/centerDesc/centerDesc'},
+      {name:'数据共享', url:'/pages/dataShare/dataShare'},
+      {name:'活动断层勘察项目清单', url:'/pages/projectList/projectList'},
+      {name:'设置', url:'/pages/setting/setting'},
+      {name:'意见反馈', url:'/pages/suggestionFeedback/suggestionFeedback'}
     ]
   },
   navi(e) {
@@ -21,6 +23,7 @@ Page({
     tabbar.tabbar("tabBar", 4, this) // 设置底部tab页
     let query = wx.createSelectorQuery()
     getTabHeight.getTabHeight(query, this) // 获取tab高度
+    check_grey.is_grey(this) // 置灰
   },
   tapItem(e) {
     let url = e.currentTarget.dataset.url

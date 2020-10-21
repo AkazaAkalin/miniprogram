@@ -1,82 +1,84 @@
-<import src='../../components/navigation/navigation.wxml'/>
-<template is="navigator" data="{{naviData}}"/>
-<view>
-  <view class="swpierContainer">
-    <swiper  indicator-dots= 'true'  indicator-color= '#979797'  indicator-active-color= '#0F4E95'  autoplay= 'true' circular= 'true'
-    >
-      <block wx:for="{{swiperImgs}}" wx:key='index'>
-        <swiper-item>
-          <image class="swiperImg" src="{{item}}" mode="aspectFill"/>
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
-  <view class="dynamicContainer">
-    <view class="dynamicTabBox">
-      <view class="dynamicTab">
-        <view class="dynamicTitle" bindtap="changeTab" data-index='0'>
-          <view class="dynamicText {{ tabIndex == 0 ? 'selected' : ''}}">工作要闻</view>
-          <view wx:if='{{tabIndex == 0}}' class="selectedLine"></view>
+<view class="{{ is_grey ? 'grey' : ''}}">
+  <import src='../../components/navigation/navigation.wxml'/>
+  <template is="navigator" data="{{naviData}}"/>
+  <view>
+    <view class="swpierContainer">
+      <swiper  indicator-dots= 'true'  indicator-color= '#979797'  indicator-active-color= '#0F4E95'  autoplay= 'true' circular= 'true'
+      >
+        <block wx:for="{{swiperImgs}}" wx:key='index'>
+          <swiper-item>
+            <image class="swiperImg" src="{{item.url}}" mode="aspectFill" bindtap="jump" data-url='{{item.id}}'/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="dynamicContainer">
+      <view class="dynamicTabBox">
+        <view class="dynamicTab">
+          <view class="dynamicTitle" bindtap="changeTab" data-index='0'>
+            <view class="dynamicText {{ tabIndex == 0 ? 'selected' : ''}}">工作要闻</view>
+            <view wx:if='{{tabIndex == 0}}' class="selectedLine"></view>
+          </view>
+          <view class="dynamicTitle" bindtap="changeTab" data-index='1'>
+            <view class="dynamicText {{ tabIndex == 1 ? 'selected' : ''}}">项目进展</view>
+            <view wx:if='{{tabIndex == 1}}' class="selectedLine"></view>
+          </view>
+          <view class="dynamicTitle" bindtap="changeTab" data-index='2'>
+            <view class="dynamicText {{ tabIndex == 2 ? 'selected' : ''}}">成果展示</view>
+            <view wx:if='{{tabIndex == 2}}' class="selectedLine"></view>
+          </view>
         </view>
-        <view class="dynamicTitle" bindtap="changeTab" data-index='1'>
-          <view class="dynamicText {{ tabIndex == 1 ? 'selected' : ''}}">项目进展</view>
-          <view wx:if='{{tabIndex == 1}}' class="selectedLine"></view>
-        </view>
-        <view class="dynamicTitle" bindtap="changeTab" data-index='2'>
-          <view class="dynamicText {{ tabIndex == 2 ? 'selected' : ''}}">成果展示</view>
-          <view wx:if='{{tabIndex == 2}}' class="selectedLine"></view>
-        </view>
-      </view>
-      <view class="underLine"></view>
-      <view class="dynamicList">
-        <scroll-view scroll-y wx:if='{{tabIndex == 0}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
-          <block wx:for='{{dynamicList}}' wx:key='index'>
-            <view class="abstractBox" bindtap="goDetail" data-type="abstract" data-id='{{item.id}}'>
-              <view>
-                <image class="abstractImgBox" src="{{item.cover_pc_url}}"></image>
-              </view>
-              <view class="abstractContentBox">
-                <view class="abstractTitle">{{item.title}}</view>
-                <view class="abstractInfo">
-                  <view class="abstractInfoTime">{{item.published_time}}</view>
-                  <view class="abstractInfoResource">来源：{{item.source}}</view>
+        <view class="underLine"></view>
+        <view class="dynamicList">
+          <scroll-view scroll-y wx:if='{{tabIndex == 0}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+            <block wx:for='{{dynamicList}}' wx:key='index'>
+              <view class="abstractBox" bindtap="goDetail" data-type="abstract" data-id='{{item.id}}' data-title="{{item.title}}">
+                <view>
+                  <image class="abstractImgBox" src="{{item.cover_pc_url  || defaultImg}}"/>
+                </view>
+                <view class="abstractContentBox">
+                  <view class="abstractTitle">{{item.title}}</view>
+                  <view class="abstractInfo">
+                    <view class="abstractInfoTime">{{item.published_time}}</view>
+                    <view class="abstractInfoResource">来源：{{item.source}}</view>
+                  </view>
                 </view>
               </view>
-            </view>
-          </block>
-        </scroll-view>
-        <scroll-view scroll-y wx:if='{{tabIndex == 1}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
-          <block wx:for='{{progressList}}' wx:key='index'>
-            <view class="progressBox"  bindtap="goDetail" data-type="progress"  data-id='{{item.id}}'>
-                <view class="progressTitle">{{item.title}}</view>
-                <view class="progressInfo">
-                  <view class="progressInfoTime">{{item.published_time}}</view>
-                  <view class="progressInfoResource">来源：{{item.source}}</view>
-                </view>
-            </view>
-          </block>
-        </scroll-view>
-        <scroll-view scroll-y wx:if='{{tabIndex == 2}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
-          <block wx:for="{{establishList}}" wx:key='index'>
-            <view class="establishBox"  bindtap="goDetail" data-type="establish"  data-id='{{item.id}}'>
-              <view>
-                <image class="establishImgBox" src="{{item.cover_pc_url}}"></image>
+            </block>
+          </scroll-view>
+          <scroll-view scroll-y wx:if='{{tabIndex == 1}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+            <block wx:for='{{progressList}}' wx:key='index'>
+              <view class="progressBox"  bindtap="goDetail" data-type="progress"  data-id='{{item.id}}' data-title="{{item.title}}">
+                  <view class="progressTitle">{{item.title}}</view>
+                  <view class="progressInfo">
+                    <view class="progressInfoTime">{{item.published_time}}</view>
+                    <view class="progressInfoResource">来源：{{item.source}}</view>
+                  </view>
               </view>
-              <view class="establishContentBox">
-                <view class="establishTitle">{{item.title}}</view>
-                <view class="establishInfo">
-                  <view class="establishInfoTime">{{item.published_time}}</view>
-                  <view class="establishInfoResource">来源：{{item.source}}</view>
+            </block>
+          </scroll-view>
+          <scroll-view scroll-y wx:if='{{tabIndex == 2}}' style="height:{{scrollHeight}}px" bindscrolltolower='load'>
+            <block wx:for="{{establishList}}" wx:key='index'>
+              <view class="establishBox"  bindtap="goDetail" data-type="establish"  data-id='{{item.id}}' data-title="{{item.title}}">
+                <view>
+                  <image class="establishImgBox" src="{{item.cover_pc_url || defaultImg}}"/>
+                </view>
+                <view class="establishContentBox">
+                  <view class="establishTitle">{{item.title}}</view>
+                  <view class="establishInfo">
+                    <view class="establishInfoTime">{{item.published_time}}</view>
+                    <view class="establishInfoResource">来源：{{item.source}}</view>
+                  </view>
                 </view>
               </view>
-            </view>
-          </block>
-        </scroll-view>
-        <loadingIcon show='{{showLoading}}' text='{{text}}'/>
+            </block>
+          </scroll-view>
+          <loadingIcon show='{{showLoading}}' text='{{text}}'/>
+        </view>
       </view>
     </view>
   </view>
+  <view class="blank" style="height:{{tabbarHeight}}px"></view>
+  <import src='../../components/tabbar/tabbar.wxml'/>
+  <template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>
 </view>
-<view class="blank" style="height:{{tabbarHeight}}px"></view>
-<import src='../../components/tabbar/tabbar.wxml'/>
-<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

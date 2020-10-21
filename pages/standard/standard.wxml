@@ -1,6 +1,6 @@
-<import src='../../components/navigation/navigation.wxml'/>
-<template is="navigator" data="{{naviData}}"/>
-<view> 
+<view class="{{ is_grey ? 'grey' : ''}}"> 
+  <import src='../../components/navigation/navigation.wxml'/>
+  <template is="navigator" data="{{naviData}}"/>
   <view class="tabContianer">
     <view class="standardBox {{tab == 0 ? 'seleted':''}}" bindtap="changeTab" data-index="0">
       <view>标准规范</view>
@@ -37,7 +37,7 @@
       </scroll-view>
     </view>
   </view>
+  <view class="blank" style="height:{{tabbarHeight}}px"></view>
+  <import src='../../components/tabbar/tabbar.wxml'/>
+  <template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>
 </view>
-<view class="blank" style="height:{{tabbarHeight}}px"></view>
-<import src='../../components/tabbar/tabbar.wxml'/>
-<template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>

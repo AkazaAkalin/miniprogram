@@ -7,7 +7,7 @@ function navigator(context, title = '', pages) {
       height: app.globalData.statusBarHeight + app.globalData.naviHeight,
       title,
       margin: app.globalData.navTop,
-      showBack
+      showBack,
     }
   })
 }

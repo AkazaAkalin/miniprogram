@@ -2,3 +2,9 @@
 .wxParse-img{
   display: flex;
 }
+.title {
+  font-size: 32rpx;
+  margin: 0 20rpx;
+  font-weight: bold;
+  text-indent: 2em;
+}

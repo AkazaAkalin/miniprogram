@@ -1,4 +1,5 @@
 //app.js
+const request = require('./utils/request')
 App({
   globalData: {
     pixelRatio: null,
@@ -6,7 +7,7 @@ App({
     naviHeight: 44,
     windowHeight: null,
     screenHeight: null,
-    navTop: null
+    navTop: null,
   },
   onLaunch: function () {
     // 展示本地存储能力
@@ -19,6 +20,7 @@ App({
     //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
     //   }
     // })
+    // 判断小程序是否要置灰
     wx.getSystemInfo({
       success: (result) => {
         this.globalData.pixelRatio = result.pixelRatio

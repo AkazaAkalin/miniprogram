@@ -1,4 +1,7 @@
-<import src='../../components/navigation/navigation.wxml'/>
-<template is="navigator" data="{{naviData}}"/>
-<import src="../../wxParse/wxParse.wxml"/>
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+<view class="{{ is_grey ? 'grey' : ''}}">
+  <import src='../../components/navigation/navigation.wxml'/>
+  <template is="navigator" data="{{naviData}}"/>
+  <view class="title">{{title}}</view>
+  <import src="../../wxParse/wxParse.wxml"/>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

@@ -1,23 +1,25 @@
 <template name='tabbar'>
-  <image class="barBackGround" src="../../images/tabBar/bar.png"/>
-  <view id="tabBar" class="tabBar">
-    <block wx:for="{{tabBar}}" wx:for-item='item' wx:key='tabBar'>
-      <view class="tabBar-item">
-        <view bindtap="navi" data-url="{{item.tabBarPath}}">
-            <view wx:if='{{item.tabBarPath !== "/pages/map/map"}}'>
-              <view class="tabContainer">
-                <image class="icon" src="{{item.iconPath}}"/> 
+  <view class="{{ is_grey ? 'grey' : ''}}" >
+    <image class="barBackGround" src="../../images/tabBar/bar.png"/>
+    <view id="tabBar" class="tabBar">
+      <block wx:for="{{tabBar}}" wx:for-item='item' wx:key='tabBar'>
+        <view class="tabBar-item">
+          <view bindtap="navi" data-url="{{item.tabBarPath}}">
+              <view wx:if='{{item.tabBarPath !== "/pages/map/map"}}'>
+                <view class="tabContainer">
+                  <image class="icon" src="{{item.iconPath}}"/> 
+                </view>
+                <view class="{{item.current== 1 ? 'tabBartext' : 'tabBarOffText'}}">{{item.text}}</view>
+              </view> 
+              <view wx:else>
+                <view class="mapContainer">
+                  <image class="mapIcon" src="{{item.iconPath}}"/>
+                </view>
+                <view class="{{item.current== 1 ? 'tabBartext' :'tabBarOffText'}}">{{item.text}}</view>
               </view>
-              <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
-            </view> 
-            <view wx:else>
-              <view class="mapContainer">
-                <image class="mapIcon" src="{{item.iconPath}}"/>
-              </view>
-              <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
-            </view>
+          </view>
         </view>
-      </view>
-    </block>
+      </block>
+    </view>
   </view>
 </template>

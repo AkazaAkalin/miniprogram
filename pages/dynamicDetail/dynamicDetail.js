@@ -1,6 +1,7 @@
 const navigator = require('../../components/navigation/navigation')
 const request = require('../../utils/request')
 var WxParse = require('../../wxParse/wxParse.js')
+const check_grey = require('../../utils/checkGrey')
 Page({
   data: {},
   type:'',
@@ -11,6 +12,7 @@ Page({
     let pages = getCurrentPages() // 获取当前的页面栈
     navigator.navigator(this, '地震活动断层探察数据中心', pages)
     this.getData()
+    check_grey.is_grey(this) // 置灰
   },
   // 左上角返回方法 
   back: function() { 
@@ -19,7 +21,9 @@ Page({
   getData() {
     let url = `news_detail_api/${this.id}`
       request.request(url).then(res => {
-        // console.log(res.data.data.news_info.content)
+        console.log(res.data.data.news_info.title)
+        let title = res.data.data.news_info.title 
+        this.setData({title})
         var article = res.data.data.news_info.content
         article.replace(/font-size: 14pt;/g,'font-size: 20px')
         /*

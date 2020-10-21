@@ -1,14 +1,15 @@
-<import src='../../components/navigation/navigation.wxml'/>
-<template is="navigator" data="{{naviData}}"/>
-<view class="title">
-  <view class="smallBox"></view>
-  <view class="midBox"></view>
-  <view class="bigBox"></view>
-  <view class="titleText">联系方式</view>
-  <view class="bigBox"></view>
-  <view class="midBox"></view>
-  <view class="smallBox"></view>
-</view>
+<view class="{{ is_grey ? 'grey' : ''}}">
+  <import src='../../components/navigation/navigation.wxml'/>
+  <template is="navigator" data="{{naviData}}"/>
+  <view class="title">
+    <view class="smallBox"></view>
+    <view class="midBox"></view>
+    <view class="bigBox"></view>
+    <view class="titleText">联系方式</view>
+    <view class="bigBox"></view>
+    <view class="midBox"></view>
+    <view class="smallBox"></view>
+  </view>
   <view class="info">
     <view class="phone">
       <view class="phoneText">联系电话:</view>
@@ -19,4 +20,5 @@
       <view class="emailNumber">activefault_mo@vip.163.com</view>
     </view>
   </view>  
+</view>
 

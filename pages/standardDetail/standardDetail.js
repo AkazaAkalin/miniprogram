@@ -1,9 +1,11 @@
 const navigator = require('../../components/navigation/navigation')
 const request = require('../../utils/request')
 var WxParse = require('../../wxParse/wxParse.js')
+const check_grey = require('../../utils/checkGrey')
 Page({
   data: {
-    href: ''
+    href: '',
+    fullurl:''
   },
   type:'',
   id:'',
@@ -13,11 +15,42 @@ Page({
     let pages = getCurrentPages() // 获取当前的页面栈
     navigator.navigator(this, '地震活动断层探察数据中心', pages)
     this.getData()
+    check_grey.is_grey(this) // 置灰
   },
   getData() {
     let url = `standard_detail_api/${this.id}`
     request.request(url).then(res => {
-      console.log(res.data.data.news_info)
+      console.log(res.data.data.news_info,res.data.data.news_info.attachment_info.full_path)
+      let fullurl = res.data.data.news_info.attachment_info.full_path
+      this.setData({fullurl})
+      if(fullurl) {
+        wx.downloadFile({
+          url: fullurl,
+          success: function (res) {
+            const filePath = res.tempFilePath
+            wx.openDocument({
+              filePath: filePath,
+              success: function (res) {
+                console.log('打开文档成功')
+              },
+              fail: function(err) {
+                console.log(err)
+                wx.showToast({
+                  title: '打开文件失败',
+                  icon: 'none'
+                })
+              }
+            })
+          },
+          fail: res => {
+            console.log(res)
+            wx.showToast({
+              title: '下载文件失败',
+              icon: 'none'
+            })
+          }
+        })
+      }
       var article = res.data.data.news_info.content
       /**
       * WxParse.wxParse(bindName , type, data, target,imagePadding)

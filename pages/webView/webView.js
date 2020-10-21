@@ -3,7 +3,9 @@ Page({
     webUrl: ''
   },
   onLoad: function (options) {
-    console.log(decodeURI(options.url))
-    this.setData({webUrl: options.url})
+    let url = decodeURI(options.url)
+    let webUrl = url.replace(/http:/g, 'https:')
+    console.log(webUrl)
+    this.setData({webUrl})
   },
 })

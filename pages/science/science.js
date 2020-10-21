@@ -4,9 +4,11 @@ const getHeight = require('../../utils/getHeight.js')
 const navigator = require('../../components/navigation/navigation')
 const app = getApp()
 const request = require('../../utils/request')
+const check_grey = require('../../utils/checkGrey')
 Page({
   data: {
     dataList:[],
+    defaultImg: '../../images/default.png'
   },
   onLoad: function () {
     let pages = getCurrentPages()
@@ -16,6 +18,7 @@ Page({
     getTabHeight.getTabHeight(query, this) // 获取tab
     this.setScollHeight(query)
     this.getData()
+    check_grey.is_grey(this) // 置灰
   },
   setScollHeight(query) {
     let p1 = getHeight.getHeight(query, 'barBackGround') // 底部tab高度

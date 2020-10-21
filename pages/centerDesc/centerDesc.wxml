@@ -1,6 +1,7 @@
+<view class="{{ is_grey ? 'grey' : ''}}" >
 <import src='../../components/navigation/navigation.wxml'/>
 <template is="navigator" data="{{naviData}}"/>
-<view class="container">
+<view class="container {{ is_grey ? 'grey' : ''}}">
   <view class="title">地震活动断层探察数据中心简介</view>
   <text class="text">为深入贯彻落实中国地震局党组关于震灾预防体制机制改革的部署，理顺震防中心、各研究所和省级地震局相关工作体制，强化业务中心对事业发展的业务支撑能力、对省局的业务指导能力和对社会的服务能力，根据《地震灾害风险防治体制改革顶层设计方案》要求，依托震防中心成立地震活动断层探察数据中心及专家组，构建全新的业务管理体系。
   </text>
@@ -54,3 +55,5 @@
   </view>
 </view>
 
+
+</view>

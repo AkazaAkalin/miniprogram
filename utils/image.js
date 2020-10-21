@@ -12,7 +12,8 @@ const images =  {
   },
   suggestionFeedback: {
     tip: '../../images/suggestionFeedback/tip.png'
-  }
+  },
+  defaultImg: '../images/default.png'
 }
 module.exports = {
   images

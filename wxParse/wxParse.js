@@ -33,8 +33,9 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
   var transData = {};//存放转化后的数据
   if (type == 'html') {
     transData = HtmlToJson.html2json(data, bindName);
-    // 为了让字号改成我们要的字号
-    transData = JSON.stringify(transData, ' ', ' ').replace(/14pt;/g,'28rpx;')
+    // 为了让字号改成我们要的字号TODO
+    transData = JSON.stringify(transData, ' ', ' ')
+    transData = transData.replace(/font-size:\s[0-9]+(\.?[0-9]+)?pt/g, 'font-size: 32rpx')
     transData = JSON.parse(transData)
     // console.log(JSON.stringify(transData, ' ', ' '));
   } else if (type == 'md' || type == 'markdown') {

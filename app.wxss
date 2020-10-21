@@ -2,6 +2,11 @@
 @import "/components/tabbar/tabbar.wxss"; 
 @import "/components/navigation/navigation.wxss";
 @import "/wxParse/wxParse.wxss";
+page{
+}
+.grey {
+  filter: grayscale(100%);
+}
 .container {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 <template name="navigator">
-  <view class='navi' style="height:{{naviData.height}}px">
+  <view class="navi {{ is_grey ? 'grey' : ''}}" style="height:{{naviData.height}}px">
     <view class="backBox" style="margin-top:{{naviData.margin}}px; padding-top: 16rpx;" bindtap='back' wx:if="{{naviData.showBack}}">
       <view class="backIconBox">
         <image class="backIcon" src="../../images/navi/left.png"  mode="aspectFill"/>

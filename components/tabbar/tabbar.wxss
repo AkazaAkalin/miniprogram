@@ -30,6 +30,10 @@
   color: #0F4E95;
   font-size: 24rpx;
 }
+.tabBarOffText{
+  color: #171717;
+  font-size: 24rpx;
+}
 .barBackGround {
   height: 135rpx;
   width: 100%;
@@ -39,7 +43,7 @@
 .mapContainer {
   height: 96rpx;
   width: 96rpx;
-  background-image: linear-gradient(0deg, #04BEFE 0%, #4481EB 100%);
+  background-image: linear-gradient(0deg, #3686F2 0%, #3B49EE 100%);
   border-radius: 50%;
   display:  flex;
   align-items: center;

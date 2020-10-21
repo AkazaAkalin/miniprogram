@@ -28,7 +28,7 @@
 		},
 		"bundle": true,
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -146,6 +146,20 @@
 					"id": -1,
 					"name": "scienceDetail",
 					"pathName": "pages/scienceDetail/scienceDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/webView/webView",
+					"pathName": "pages/webView/webView",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "PDF",
+					"pathName": "pages/projectList/projectList",
 					"scene": null
 				}
 			]
