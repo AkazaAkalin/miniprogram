@@ -13,16 +13,21 @@ Page({
     this.type = options.type 
     this.id = options.id
     let pages = getCurrentPages() // 获取当前的页面栈
-    navigator.navigator(this, '地震活动断层探察数据中心', pages)
     this.getData()
-    check_grey.is_grey(this) // 置灰
+    check_grey.is_grey(this).then(res => {
+      navigator.navigator(this, '地震活动断层探察数据中心', pages, res)
+    }) // 置灰
   },
+  onShareAppMessage: function() {},
+  onShareTimeline: function() {},
   getData() {
     let url = `standard_detail_api/${this.id}`
     request.request(url).then(res => {
-      console.log(res.data.data.news_info,res.data.data.news_info.attachment_info.full_path)
-      let fullurl = res.data.data.news_info.attachment_info.full_path
-      this.setData({fullurl})
+      // console.log(res.data.data.news_info.attachment_info.full_path)
+      let fullurl = res.data.data.news_info.attachment_info.full_path || ''
+      // let content = res.data.data.news_info.content
+      fullurl = fullurl.replace(/http:/, 'https:')
+      this.setData({ fullurl })
       if(fullurl) {
         wx.downloadFile({
           url: fullurl,

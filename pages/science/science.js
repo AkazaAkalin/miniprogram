@@ -13,13 +13,18 @@ Page({
   onLoad: function () {
     let pages = getCurrentPages()
     let query = wx.createSelectorQuery()
-    navigator.navigator(this, '地震活动断层探察数据中心', pages)
-    tabbar.tabbar("tabBar", 3, this)
+    // navigator.navigator(this, '地震活动断层探察数据中心', pages)
+    // tabbar.tabbar("tabBar", 3, this)
     getTabHeight.getTabHeight(query, this) // 获取tab
     this.setScollHeight(query)
     this.getData()
-    check_grey.is_grey(this) // 置灰
+    check_grey.is_grey(this).then(res => {
+      navigator.navigator(this, '地震活动断层探察数据中心', pages, res)
+      tabbar.tabbar("tabBar", 3, this, res)
+    }) // 置灰
   },
+  onShareAppMessage: function() {},
+  onShareTimeline: function() {},
   setScollHeight(query) {
     let p1 = getHeight.getHeight(query, 'barBackGround') // 底部tab高度
     Promise.all([p1]).then(res => {

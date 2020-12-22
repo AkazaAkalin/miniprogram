@@ -1,6 +1,6 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
 <view class="{{ is_grey ? 'grey' : ''}}">
-  <import src='../../components/navigation/navigation.wxml'/>
-  <template is="navigator" data="{{naviData}}"/>
   <view class="title">活动断层数据共享流程</view>
   <view class="imgBox">
     <image class="img" src="./dataShare.png" bindtap="preview" data-src='./dataShare.png'/>
@@ -35,7 +35,7 @@
   </view>
   <view class="documentBox">
     <block wx:for="{{docList}}" wx:key='index'>
-      <view class="doc" bindtap="dowmload" data-id='{{item.attachment}}'>{{item.title}}</view>
+      <view class="doc" bindtap="dowmload" data-id='{{item.attachment_id}}'>{{item.title}}</view>
     </block>
     <!-- <view class="doc" bindtap="dowmload" data-id='701'>数据共享应用证明</view>
     <view class="doc" bindtap="dowmload" data-id='595'>数据共享申请表</view>

@@ -13,7 +13,8 @@ const images =  {
   suggestionFeedback: {
     tip: '../../images/suggestionFeedback/tip.png'
   },
-  defaultImg: '../images/default.png'
+  defaultImg: '../images/default.png',
+  shareImg: '../../images/shareImg.png'
 }
 module.exports = {
   images

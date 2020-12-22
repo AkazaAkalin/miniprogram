@@ -9,7 +9,9 @@ Page({
   onLoad: function () {
     let pages = getCurrentPages() // 获取当前的页面栈
     navigator.navigator(this, '数据共享', pages)
-    check_grey.is_grey(this) // 置灰
+    check_grey.is_grey(this).then((res => {
+      navigator.navigator(this, '数据共享', pages, res)
+    })) // 置灰
     this.getDocumentData()
   },
   // 左上角返回方法 
@@ -18,11 +20,11 @@ Page({
   },
   // 获取常用文件下载模块的数据
   getDocumentData() {
-    let url = `file_download_api`
+    let url = `data_share_api`
     request.request(url).then(res => {
-      // console.log(res.data.data.file_downloads)
+      // console.log(res.data.data.file_downs)
       this.setData({
-        docList:res.data.data.file_downloads
+        docList:res.data.data.file_downs
       })
     })
   },
@@ -32,15 +34,15 @@ Page({
     wx.downloadFile({
       url: `${baseUrl}handout_down/${id}`,
       success: res => {
-        console.log(res.tempFilePath, 'success')
+        // console.log(res.tempFilePath, 'success')
         let tempPath = res.tempFilePath
         wx.openDocument({
           filePath: tempPath,
           success: function (res) {
-            console.log('打开文档成功')
+            // console.log('打开文档成功')
           },
           fail: function(err) {
-            console.log(err)
+            // console.log(err)
             wx.showToast({
               title: '打开文件失败',
               icon: 'none'
@@ -49,7 +51,7 @@ Page({
         })
       },
       fail: err => {
-        console.log('fail')
+        // console.log('fail')
       }
     })
   },

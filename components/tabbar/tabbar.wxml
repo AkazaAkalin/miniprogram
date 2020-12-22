@@ -1,7 +1,7 @@
 <template name='tabbar'>
-  <view class="{{ is_grey ? 'grey' : ''}}" >
+  <view>
     <image class="barBackGround" src="../../images/tabBar/bar.png"/>
-    <view id="tabBar" class="tabBar">
+    <view id="tabBar" class="tabBar {{is_grey ? 'grey' : ''}}">
       <block wx:for="{{tabBar}}" wx:for-item='item' wx:key='tabBar'>
         <view class="tabBar-item">
           <view bindtap="navi" data-url="{{item.tabBarPath}}">

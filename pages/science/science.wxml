@@ -1,26 +1,28 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
 <view class="{{ is_grey ? 'grey' : ''}}">
-  <import src='../../components/navigation/navigation.wxml'/>
-  <template is="navigator" data="{{naviData}}"/>
   <view class="content">
-    <scroll-view class="scroll" scroll-y style="height:{{scrollHeight}}px">
+    <scroll-view class="scroll" scroll-y style="height:{{scrollHeight+20}}px">
       <block wx:for='{{dataList}}' wx:key='index' wx:for-item="item">
         <view class="itemBox">
           <view class="item" bindtap="goDetail" data-id='{{item.id}}'>
-            <view class="itemTitle">{{item.title}}</view>
-            <view class="itemPubTime">发布时间：{{item.published_time}}</view>
             <view class="itemContent">
               <view class="itemImgBox">
                 <image src="{{item.cover_pc_url || defaultImg}}"/>
               </view>
-              <view class="itemText">{{item.excerpt}}</view>
+            </view>
+            <view class='itemInfo'>
+              <view class="itemTitle">{{item.title}}</view>
+              <view class="itemText">{{item.excerpt || ''}}</view>
+              <view class="itemPubTime">发布时间：{{item.published_time}}</view>
             </view>
           </view>
         </view>
       </block>
     </scroll-view>  
   </view>
-  <view class="blank" style="height:{{tabbarHeight}}px"></view>
-  <import src='../../components/tabbar/tabbar.wxml'/>
-  <template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>
+  <!-- <view class="blank" style="height:{{tabbarHeight}}px"></view> -->
 </view>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar, is_grey:bindData.is_grey}}"/>
 

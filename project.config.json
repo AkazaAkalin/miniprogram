@@ -28,7 +28,7 @@
 		},
 		"bundle": true,
 		"useIsolateContext": true,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -66,11 +66,11 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "动态页",
 					"pathName": "pages/dynamic/dynamic",
 					"query": "",
-					"scene": null
+					"scene": 1007
 				},
 				{
 					"id": -1,
@@ -136,18 +136,18 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 10,
 					"name": "动态详情页",
 					"pathName": "pages/dynamicDetail/dynamicDetail",
 					"query": "",
-					"scene": null
+					"scene": 1007
 				},
 				{
-					"id": -1,
+					"id": 11,
 					"name": "scienceDetail",
 					"pathName": "pages/scienceDetail/scienceDetail",
 					"query": "",
-					"scene": null
+					"scene": 1007
 				},
 				{
 					"id": -1,
@@ -160,6 +160,7 @@
 					"id": -1,
 					"name": "PDF",
 					"pathName": "pages/projectList/projectList",
+					"query": "",
 					"scene": null
 				}
 			]

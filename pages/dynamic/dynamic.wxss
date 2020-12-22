@@ -1,9 +1,13 @@
 .swpierContainer {
   width: 100%;
+  height: 66vw;
 } 
 .swiperImg {
   width: 100%;
-  /* height: 350rpx; */
+  height: 66vw;
+}
+.swiper {
+  height: 66vw;
 }
 .dynamicTab {
   width: 100%;
@@ -73,8 +77,7 @@
 }
 .abstractInfo, .establishInfo{
   width: 415rpx;
-  display:  flex;
-  justify-content: space-between;
+  display: flex;
   font-size: 22rpx;
   color: #999999;
   position: absolute;
@@ -84,7 +87,7 @@
   white-space: nowrap;
 } 
 .progressBox {
-  height: 191rpx;
+  height: 195rpx;
   width: 705rpx;
   margin:  20rpx auto;
   display: flex;
@@ -102,6 +105,17 @@
   -webkit-box-orient: vertical;
   word-break: break-all;
 }
+.progressExcerpt {
+  margin: 19rpx 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  font-size: 22rpx;
+  color: #999999;
+}
 .progressInfo {
   width: 100%;
   display: flex;
@@ -109,5 +123,12 @@
   font-size: 22rpx;
   color: #999999;
   position: absolute;
-  bottom: 28rpx;
+  bottom: 10rpx;
+}
+.abstractInfoResource, .establishInfoResource{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.blank{
+  opacity: 0;
 }

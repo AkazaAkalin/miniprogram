@@ -37,13 +37,14 @@ function tabbarinit() {
   ]
  }
  //tabbar 主入口
-  function tabbarmain(bindName = "tabdata", id, target) {
+  function tabbarmain(bindName = "tabdata", id, target, res) {
     var that = target;
     var bindData = {};
     var otabbar = tabbarinit();
     otabbar[id]['iconPath'] = otabbar[id]['selectedIconPath'] //换当前的icon
     otabbar[id]['current'] = 1;
     bindData[bindName] = otabbar
+    bindData.is_grey = res || '' 
     that.setData({ bindData });
   }
  function navi(url, currentPage) {
@@ -53,5 +54,5 @@ function tabbarinit() {
  } 
  module.exports = {
    tabbar: tabbarmain,
-   navi: navi
+   navi: navi,
  }

@@ -2,6 +2,10 @@
   width: 661rpx;
   margin: 37rpx auto 0;
 }
+.textContainer {
+  width: 90%;
+  margin: 0 auto;
+}
 .title {
   margin-bottom: 28rpx;
   font-size: 34rpx;
@@ -9,11 +13,10 @@
   text-align: center;
 }
 .text {
-  text-indent: 52rpx;
   font-size: 26rpx;
   color: #828589;
-  text-align: left;
   line-height: 60rpx;
+  word-break: break-all;
 }
 .smallBox {
   height: 14rpx;

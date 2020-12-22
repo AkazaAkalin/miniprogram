@@ -1,6 +1,6 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
 <view class="{{ is_grey ? 'grey' : ''}}">
-  <import src='../../components/navigation/navigation.wxml'/>
-  <template is="navigator" data="{{naviData}}"/>
   <view class="title">
     <view class="smallBox"></view>
     <view class="midBox"></view>

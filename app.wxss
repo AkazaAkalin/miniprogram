@@ -6,6 +6,7 @@ page{
 }
 .grey {
   filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
 }
 .container {
   display: flex;

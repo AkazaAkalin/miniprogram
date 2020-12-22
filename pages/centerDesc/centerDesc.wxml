@@ -1,59 +1,57 @@
-<view class="{{ is_grey ? 'grey' : ''}}" >
 <import src='../../components/navigation/navigation.wxml'/>
 <template is="navigator" data="{{naviData}}"/>
-<view class="container {{ is_grey ? 'grey' : ''}}">
-  <view class="title">地震活动断层探察数据中心简介</view>
-  <text class="text">为深入贯彻落实中国地震局党组关于震灾预防体制机制改革的部署，理顺震防中心、各研究所和省级地震局相关工作体制，强化业务中心对事业发展的业务支撑能力、对省局的业务指导能力和对社会的服务能力，根据《地震灾害风险防治体制改革顶层设计方案》要求，依托震防中心成立地震活动断层探察数据中心及专家组，构建全新的业务管理体系。
-  </text>
-  <text class="text">2019年8月，按照《关于加强地震活动断层探察管理工作的通知》要求，中国地震灾害防御中心成立了“地震活动断层数据中心”。
-  </text>
-  <view class="subtitle">
-    <view class="smallBox"></view>
-    <view class="midBox"></view>
-    <view class="bigBox"></view>
-    <view class="titleText">职能职责</view>
-    <view class="bigBox"></view>
-    <view class="midBox"></view>
-    <view class="smallBox"></view>
+<view class="{{ is_grey ? 'grey' : ''}}" >
+  <view class="textContainer">
+    <view class="title">地震活动断层探察数据中心简介</view>
+    <text class="text">为深入贯彻落实中国地震局党组关于震灾预防体制机制改革的部署，理顺震防中心、各研究所和省级地震局相关工作体制，强化业务中心对事业发展的业务支撑能力、对省局的业务指导能力和对社会的服务能力，根据《地震灾害风险防治体制改革顶层设计方案》要求，依托震防中心成立地震活动断层探察数据中心及专家组，构建全新的业务管理体系。
+    </text>
+    <text class="text">2019年8月，按照《关于加强地震活动断层探察管理工作的通知》要求，中国地震灾害防御中心成立了“地震活动断层数据中心”。
+    </text>
+    <view class="subtitle">
+      <view class="smallBox"></view>
+      <view class="midBox"></view>
+      <view class="bigBox"></view>
+      <view class="titleText">职能职责</view>
+      <view class="bigBox"></view>
+      <view class="midBox"></view>
+      <view class="smallBox"></view>
+    </view>
+    <text class="text">数据中心负责活动断层探察数据的汇交管理，推进数据资源共享，协助开展全国范围活动断层探察项目的日常管理。主要职责如下：
+      ● 建设地震活动断层探察数据库和管理服务技术平台；
+      ● 检测汇集活动断层探察数据，检查数据完备性并开展质量评估，维护数据知识产权；
+      ● 整理、存储活动断层探察数据，确保信息安全；
+      ● 承担地震活动断层探察项目日常管理，包括检查、验收、绩效考评、归档等工作的组织实施；
+      ● 牵头组织起草活动断层探察技术规范和标准，牵头编制全国地震活动断层探察规划；
+      ● 牵头组织技术推广、成果应用和人员培训，跟踪国内外技术发展，强化技术储备；
+      ● 承担地震活动断层探察专家组的日常管理，包括组织开展评估、论证、审查等；
+      ● 完成震害防御司交办的其他事项。
+    </text> 
+    <view>
+      <image class="centerImgBox" src="./duty.png"></image>
+    </view>
+    <view class="subtitle">
+      <view class="smallBox"></view>
+      <view class="midBox"></view>
+      <view class="bigBox"></view>
+      <view class="titleText">联系方式</view>
+      <view class="bigBox"></view>
+      <view class="midBox"></view>
+      <view class="smallBox"></view>
+    </view>
+    <view class="contact">
+      联系地址：
+      <view style="text-indent: 52rpx;">北京市朝阳区民族园路9号 中国地震灾害防御中心</view>
+      邮政编码： 100029
+      <view> 联系电话：
+        <view style="text-indent: 52rpx;">项目方案审查与验收服务    010-69941176</view>
+        <view style="text-indent: 52rpx;">数据共享服务      010-69941176</view>
+        <view style="text-indent: 52rpx;">数据库检测服务    010-69941185</view>
+        <view style="text-indent: 52rpx;">数据库入库咨询    010-69941178</view>
+      </view> 
+      邮箱地址：activefault_mo@vip.163.com
+    </view>
+    <view> 
+      <image class="bottomImgBox" src="./map.png"></image>
+    </view>
   </view>
-  <text class="text">数据中心负责活动断层探察数据的汇交管理，推进数据资源共享，协助开展全国范围活动断层探察项目的日常管理。主要职责如下：
-    ● 建设地震活动断层探察数据库和管理服务技术平台；
-    ● 检测汇集活动断层探察数据，检查数据完备性并开展质量评估，维护数据知识产权；
-    ● 整理、存储活动断层探察数据，确保信息安全；
-    ● 承担地震活动断层探察项目日常管理，包括检查、验收、绩效考评、归档等工作的组织实施；
-    ● 牵头组织起草活动断层探察技术规范和标准，牵头编制全国地震活动断层探察规划；
-    ● 牵头组织技术推广、成果应用和人员培训，跟踪国内外技术发展，强化技术储备；
-    ● 承担地震活动断层探察专家组的日常管理，包括组织开展评估、论证、审查等；
-    ● 完成震害防御司交办的其他事项。
-  </text> 
-  <view>
-    <image class="centerImgBox" src="./duty.png"></image>
-  </view>
-  <view class="subtitle">
-    <view class="smallBox"></view>
-    <view class="midBox"></view>
-    <view class="bigBox"></view>
-    <view class="titleText">联系方式</view>
-    <view class="bigBox"></view>
-    <view class="midBox"></view>
-    <view class="smallBox"></view>
-  </view>
-  <view class="contact">
-    联系地址：
-    <view style="text-indent: 52rpx;">北京市朝阳区民族园路9号 中国地震灾害防御中心</view>
-    邮政编码： 100029
-    <view> 联系电话：
-      <view style="text-indent: 52rpx;">项目方案审查与验收服务    010-69941176</view>
-      <view style="text-indent: 52rpx;">数据共享服务      010-69941176</view>
-      <view style="text-indent: 52rpx;">数据库检测服务    010-69941185</view>
-      <view style="text-indent: 52rpx;">数据库入库咨询    010-69941178</view>
-    </view> 
-    邮箱地址：activefault_mo@vip.163.com
-  </view>
-  <view> 
-    <image class="bottomImgBox" src="./map.png"></image>
-  </view>
-</view>
-
-
 </view>

@@ -9,7 +9,7 @@ App({
     screenHeight: null,
     navTop: null,
   },
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -43,5 +43,9 @@ App({
       // success: res => console.log(res),
       // fail: res => console.log(res)
     })
-  }
+  },
+  onShow: function(options) {
+    // console.log(options.scene)
+    this.globalData.scene = options.scene
+  },
 })

@@ -13,7 +13,7 @@
   text-align: center;
   font-weight: bold;
 }
-.backBox {
+.backBox, .homeBox{
   position: fixed;
   left: 30rpx;
   top: 0;
@@ -26,6 +26,12 @@
   height: 35rpx;
   width: 20rpx;
   margin-right: 20rpx;
+}
+.homeIcon {
+  position: relative;
+  top: 6rpx;
+  height: 40rpx;
+  width: 40rpx;
 }
 .backText {
   font-size: 28rpx;

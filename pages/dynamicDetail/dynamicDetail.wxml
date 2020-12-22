@@ -1,7 +1,16 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
 <view class="{{ is_grey ? 'grey' : ''}}">
-  <import src='../../components/navigation/navigation.wxml'/>
-  <template is="navigator" data="{{naviData}}"/>
   <view class="title">{{title}}</view>
+  <view class="info {{ column ? 'column': ''}}">
+    <view>来源：{{source_arr}}</view>
+    <view style=''>日期：{{published_time}}</view>
+  </view>
   <import src="../../wxParse/wxParse.wxml"/>
   <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
 </view>
+<view style="height:300rpx"></view>
+<button class='shareContainer' open-type="share">
+  <image class='shareImg' src="{{shareImg}}"/>
+  <view class='shareBtn'>转发给好友</view>
+</button>

@@ -1,6 +1,6 @@
+<import src='../../components/navigation/navigation.wxml'/>
+<template is="navigator" data="{{naviData}}"/>
 <view class="{{ is_grey ? 'grey' : ''}}"> 
-  <import src='../../components/navigation/navigation.wxml'/>
-  <template is="navigator" data="{{naviData}}"/>
   <view class="tabContianer">
     <view class="standardBox {{tab == 0 ? 'seleted':''}}" bindtap="changeTab" data-index="0">
       <view>标准规范</view>
@@ -14,10 +14,15 @@
       <scroll-view scroll-y style="height:{{scrollHeight}}px" bindscrolltolower='load'>
         <block wx:for='{{standardList}}' wx:key='index'>
           <view class="listItemBox" bindtap="goDetail" data-id='{{item.id}}' data-type='sta'>
-            <view class="listItem">{{item.title}}</view>
-            <view class="itemInfo">
-              <view>{{item.published_time}}</view>
-              <view wx:if='{{item.source}}'>来源：{{item.source}}</view>
+            <view class='imgContainer'>
+              <image class="img" src="{{item.isGB ? GBImage:DBImage}}"></image>
+            </view>
+            <view class='infoContainer'>
+              <view class="listItem">{{item.title}}</view>
+              <view class="itemInfo">
+                <view class='publishTime'>{{item.published_time}}</view>
+                <view class='source' wx:if='{{item.source}}'>来源：{{item.source}}</view>
+              </view>
             </view>
           </view>
         </block>
@@ -27,10 +32,15 @@
       <scroll-view scroll-y style="height:{{scrollHeight}}px" bindscrolltolower='load'>
          <block wx:for='{{dataList}}' wx:key='index'>
           <view class="listItemBox" bindtap="goDetail" data-id='{{item.id}}' data-type='doc'>
-            <view class="listItem">{{item.title}}</view>
-            <view class="itemInfo">
-              <view>{{item.published_time}}</view>
-              <view wx:if='{{item.source}}'>来源：{{item.source}}</view>
+           <view class='imgContainer'>
+              <image class="textImg" src="{{textImg}}"></image>
+            </view>
+            <view class='textContainer'>
+              <view class="listItem">{{item.title}}</view>
+              <view class="itemInfo">
+                <view>{{item.published_time}}</view>
+                <view wx:if='{{item.source}}'>来源：{{item.source}}</view>
+              </view>
             </view>
           </view>
         </block>
@@ -38,6 +48,6 @@
     </view>
   </view>
   <view class="blank" style="height:{{tabbarHeight}}px"></view>
-  <import src='../../components/tabbar/tabbar.wxml'/>
-  <template is="tabbar" data="{{tabBar:bindData.tabBar}}"/>
 </view>
+<import src='../../components/tabbar/tabbar.wxml'/>
+<template is="tabbar" data="{{tabBar:bindData.tabBar, is_grey:bindData.is_grey}}"/>

@@ -18,24 +18,61 @@
   border-bottom: 4rpx solid #989898;
 }
 .listItemBox {
-  margin: 38rpx auto 0 ;
-  height: 140rpx;
+  margin: 0 auto;
+  padding: 20rpx 0;
+  height: 165rpx;
   width: 649rpx;
-  border-bottom: 1rpx solid #E7E7E7;
+  border-bottom: 4rpx solid #E7E7E7;
+  display: flex;
+  justify-content: space-around;
 }
 .listItem {
   font-size: 26rpx;
   color: #222222;
-  text-align: left;
-  line-height: 45rpx;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical; 
+  word-break: break-all;
 }
 .itemInfo {
   display: flex;
-  justify-content: space-between;
   font-size: 22rpx;
   color: #999999;
-  margin-top: 20rpx;
+}
+.publishTime {
+  white-space: nowrap;
+  margin-right: 20rpx;
+}
+.source {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.imgContainer {
+  margin-right: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgContainer .img {
+  width: 195rpx;
+  height: 120rpx;
+}
+.imgContainer .textImg {
+  width: 120rpx;
+  height: 120rpx;
+}
+.infoContainer {
+  width: 368rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.textContainer {
+  width: 468rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
