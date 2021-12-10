@@ -1,0 +1,50 @@
+.smallBox {
+  height: 14rpx;
+  width: 6rpx;
+  background-color: #BED1FF;
+  margin: 0 7rpx;
+}
+
+.midBox {
+  height: 14rpx;
+  width: 10rpx;
+  background-color: #94B4FE;
+}
+
+.bigBox {
+  height: 14rpx;
+  width: 15rpx;
+  background-color: #6492FF;
+  margin: 0 6rpx;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 52rpx 0 43rpx;
+}
+
+.titleText {
+  margin: 0 43rpx;
+  font-size: 27rpx;
+  color: #1A1A1A;
+  text-align: center;
+}
+
+.projectInfo {
+  font-size: 26rpx;
+  color: #828589;
+  margin: 45rpx;
+  
+}
+.item {
+  margin: 20rpx 0;
+}
+.info {
+  font-size: 26rpx;
+  color: #828589;
+  margin: 45rpx;
+  display: flex;
+  justify-content: center;
+}

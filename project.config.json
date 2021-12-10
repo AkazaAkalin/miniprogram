@@ -162,6 +162,12 @@
 					"pathName": "pages/projectList/projectList",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/evaluate/evaluate",
+					"pathName": "pages/evaluate/evaluate",
+					"scene": null
 				}
 			]
 		}

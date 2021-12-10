@@ -12,7 +12,8 @@
     "pages/scienceDetail/scienceDetail",
     "pages/standardDetail/standardDetail",
     "pages/webView/webView",
-    "pages/projectList/projectList"
+    "pages/projectList/projectList",
+    "pages/evaluate/evaluate"
   ],
   "usingComponents": {},
   "tabBar": {

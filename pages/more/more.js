@@ -11,7 +11,8 @@ Page({
       {name:'数据共享', url:'/pages/dataShare/dataShare'},
       {name:'活动断层探查项目清单', url:'/pages/projectList/projectList'},
       {name:'设置', url:'/pages/setting/setting'},
-      {name:'意见反馈', url:'/pages/suggestionFeedback/suggestionFeedback'}
+      {name:'意见反馈', url:'/pages/suggestionFeedback/suggestionFeedback'},
+      {name:'评审意见', url:'/pages/evaluate/evaluate'}
     ]
   },
   navi(e) {

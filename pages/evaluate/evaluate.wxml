@@ -1,0 +1,55 @@
+<import src='../../components/navigation/navigation.wxml' />
+<template is="navigator" data="{{naviData}}" />
+<view class="{{ is_grey ? 'grey' : ''}}">
+  <view class="title">
+    <view class="smallBox"></view>
+    <view class="midBox"></view>
+    <view class="bigBox"></view>
+    <view class="titleText">项目信息</view>
+    <view class="bigBox"></view>
+    <view class="midBox"></view>
+    <view class="smallBox"></view>
+  </view>
+  <view class="projectInfo">
+    <view class="item">
+      <view class="">项目类型:</view>
+      <view class="">项目类型的内容项目类型的内容项目类型的内容项目类型的内容项目类型的内容项目类型的内容项目类型的内容项目类型的内容项目类型的内容</view>
+    </view>
+    <view class="item">
+      <view class="">项目名称:</view>
+
+    </view>
+    <view class="item">
+      <view class="">项目负责人:</view>
+
+    </view>
+    <view class="item">
+      <view class="">项目承担单位等信息:</view>
+
+    </view>
+  </view>
+  <view class="title">
+    <view class="smallBox"></view>
+    <view class="midBox"></view>
+    <view class="bigBox"></view>
+    <view class="titleText">项目报告</view>
+    <view class="bigBox"></view>
+    <view class="midBox"></view>
+    <view class="smallBox"></view>
+  </view>
+  <view class="info">
+    <view class="" bindtap="viewReport">查看报告</view>
+  </view>
+  <view class="title">
+    <view class="smallBox"></view>
+    <view class="midBox"></view>
+    <view class="bigBox"></view>
+    <view class="titleText">专家意见</view>
+    <view class="bigBox"></view>
+    <view class="midBox"></view>
+    <view class="smallBox"></view>
+  </view>
+  <view class="info">
+    <view class="">添加专家意见</view>
+  </view>
+</view>
